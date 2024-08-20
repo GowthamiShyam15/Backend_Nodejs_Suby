@@ -11,7 +11,7 @@ const path = require("path");
     },
     filename: (req, file, cb) => {
       // Set filename to be original filename
-      cb(null, Date.now()+ Path.extname(file.originalname));
+      cb(null, Date.now()+ path.extname(file.originalname));
     },
   });
   const upload = multer({ storage: storage });
